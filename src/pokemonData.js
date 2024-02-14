@@ -99,7 +99,7 @@ export const pokemonData = {
     def: 35,
     speed: 45,
     special: 20,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Metapod: {
     number: 11,
@@ -109,7 +109,7 @@ export const pokemonData = {
     def: 55,
     speed: 30,
     special: 25,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Butterfree: {
     number: 12,
@@ -119,7 +119,7 @@ export const pokemonData = {
     def: 50,
     speed: 70,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Weedle: {
     number: 13,
@@ -129,7 +129,7 @@ export const pokemonData = {
     def: 30,
     speed: 50,
     special: 20,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Kakuna: {
     number: 14,
@@ -139,7 +139,7 @@ export const pokemonData = {
     def: 50,
     speed: 35,
     special: 25,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Beedrill: {
     number: 15,
@@ -149,7 +149,7 @@ export const pokemonData = {
     def: 40,
     speed: 75,
     special: 45,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Pidgey: {
     number: 16,
@@ -189,7 +189,7 @@ export const pokemonData = {
     def: 35,
     speed: 72,
     special: 25,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Raticate: {
     number: 20,
@@ -199,7 +199,7 @@ export const pokemonData = {
     def: 60,
     speed: 97,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Spearow: {
     number: 21,
@@ -209,7 +209,7 @@ export const pokemonData = {
     def: 30,
     speed: 70,
     special: 31,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Fearow: {
     number: 22,
@@ -219,7 +219,7 @@ export const pokemonData = {
     def: 65,
     speed: 100,
     special: 61,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Ekans: {
     number: 23,
@@ -229,7 +229,7 @@ export const pokemonData = {
     def: 44,
     speed: 55,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Arbok: {
     number: 24,
@@ -239,7 +239,7 @@ export const pokemonData = {
     def: 69,
     speed: 80,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Pikachu: {
     number: 25,
@@ -249,7 +249,7 @@ export const pokemonData = {
     def: 30,
     speed: 90,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Raichu: {
     number: 26,
@@ -259,7 +259,7 @@ export const pokemonData = {
     def: 55,
     speed: 100,
     special: 90,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Sandshrew: {
     number: 27,
@@ -269,7 +269,7 @@ export const pokemonData = {
     def: 85,
     speed: 40,
     special: 30,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Sandslash: {
     number: 28,
@@ -279,9 +279,9 @@ export const pokemonData = {
     def: 110,
     speed: 65,
     special: 55,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
-  NidoranF: {
+  "NidoranF": {
     number: 29,
     name: "Nidoran♀",
     hp: 55,
@@ -311,7 +311,7 @@ export const pokemonData = {
     special: 75,
     expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
   },
-  NidoranM: {
+  "NidoranM": {
     number: 32,
     name: "Nidoran♂",
     hp: 46,
@@ -349,7 +349,7 @@ export const pokemonData = {
     def: 48,
     speed: 35,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.FAST,
   },
   Clefable: {
     number: 36,
@@ -359,7 +359,7 @@ export const pokemonData = {
     def: 73,
     speed: 60,
     special: 85,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.FAST,
   },
   Vulpix: {
     number: 37,
@@ -369,7 +369,7 @@ export const pokemonData = {
     def: 40,
     speed: 65,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Ninetales: {
     number: 38,
@@ -379,7 +379,7 @@ export const pokemonData = {
     def: 75,
     speed: 100,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Jigglypuff: {
     number: 39,
@@ -389,7 +389,7 @@ export const pokemonData = {
     def: 20,
     speed: 20,
     special: 25,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.FAST,
   },
   Wigglytuff: {
     number: 40,
@@ -399,7 +399,7 @@ export const pokemonData = {
     def: 45,
     speed: 45,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.FAST,
   },
   Zubat: {
     number: 41,
@@ -409,7 +409,7 @@ export const pokemonData = {
     def: 35,
     speed: 55,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Golbat: {
     number: 42,
@@ -419,7 +419,7 @@ export const pokemonData = {
     def: 70,
     speed: 90,
     special: 75,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Oddish: {
     number: 43,
@@ -459,7 +459,7 @@ export const pokemonData = {
     def: 55,
     speed: 25,
     special: 55,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Parasect: {
     number: 47,
@@ -469,7 +469,7 @@ export const pokemonData = {
     def: 80,
     speed: 30,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Venonat: {
     number: 48,
@@ -479,7 +479,7 @@ export const pokemonData = {
     def: 50,
     speed: 45,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Venomoth: {
     number: 49,
@@ -489,7 +489,7 @@ export const pokemonData = {
     def: 60,
     speed: 90,
     special: 90,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Diglett: {
     number: 50,
@@ -499,7 +499,7 @@ export const pokemonData = {
     def: 25,
     speed: 95,
     special: 45,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Dugtrio: {
     number: 51,
@@ -509,7 +509,7 @@ export const pokemonData = {
     def: 50,
     speed: 120,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Meowth: {
     number: 52,
@@ -519,7 +519,7 @@ export const pokemonData = {
     def: 35,
     speed: 90,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Persian: {
     number: 53,
@@ -529,7 +529,7 @@ export const pokemonData = {
     def: 60,
     speed: 115,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Psyduck: {
     number: 54,
@@ -539,7 +539,7 @@ export const pokemonData = {
     def: 48,
     speed: 55,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Golduck: {
     number: 55,
@@ -549,7 +549,7 @@ export const pokemonData = {
     def: 78,
     speed: 85,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Mankey: {
     number: 56,
@@ -559,7 +559,7 @@ export const pokemonData = {
     def: 35,
     speed: 70,
     special: 35,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Primeape: {
     number: 57,
@@ -569,7 +569,7 @@ export const pokemonData = {
     def: 60,
     speed: 95,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Growlithe: {
     number: 58,
@@ -579,7 +579,7 @@ export const pokemonData = {
     def: 45,
     speed: 60,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Arcanine: {
     number: 59,
@@ -589,7 +589,7 @@ export const pokemonData = {
     def: 80,
     speed: 95,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Poliwag: {
     number: 60,
@@ -719,7 +719,7 @@ export const pokemonData = {
     def: 35,
     speed: 70,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Tentacruel: {
     number: 73,
@@ -729,7 +729,7 @@ export const pokemonData = {
     def: 65,
     speed: 100,
     special: 120,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Geodude: {
     number: 74,
@@ -769,7 +769,7 @@ export const pokemonData = {
     def: 55,
     speed: 90,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Rapidash: {
     number: 78,
@@ -779,7 +779,7 @@ export const pokemonData = {
     def: 70,
     speed: 105,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Slowpoke: {
     number: 79,
@@ -789,7 +789,7 @@ export const pokemonData = {
     def: 65,
     speed: 15,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Slowbro: {
     number: 80,
@@ -799,7 +799,7 @@ export const pokemonData = {
     def: 110,
     speed: 30,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Magnemite: {
     number: 81,
@@ -809,7 +809,7 @@ export const pokemonData = {
     def: 70,
     speed: 45,
     special: 95,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Magneton: {
     number: 82,
@@ -819,9 +819,9 @@ export const pokemonData = {
     def: 95,
     speed: 70,
     special: 120,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
-  Farfetchd: {
+  "Farfetchd": {
     number: 83,
     name: "Farfetch'd",
     hp: 52,
@@ -829,7 +829,7 @@ export const pokemonData = {
     def: 55,
     speed: 60,
     special: 58,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Doduo: {
     number: 84,
@@ -839,7 +839,7 @@ export const pokemonData = {
     def: 45,
     speed: 75,
     special: 35,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Dodrio: {
     number: 85,
@@ -849,7 +849,7 @@ export const pokemonData = {
     def: 70,
     speed: 100,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Seel: {
     number: 86,
@@ -859,7 +859,7 @@ export const pokemonData = {
     def: 55,
     speed: 45,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Dewgong: {
     number: 87,
@@ -869,7 +869,7 @@ export const pokemonData = {
     def: 80,
     speed: 70,
     special: 95,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Grimer: {
     number: 88,
@@ -879,7 +879,7 @@ export const pokemonData = {
     def: 50,
     speed: 25,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Muk: {
     number: 89,
@@ -889,7 +889,7 @@ export const pokemonData = {
     def: 75,
     speed: 50,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Shellder: {
     number: 90,
@@ -899,7 +899,7 @@ export const pokemonData = {
     def: 100,
     speed: 40,
     special: 45,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Cloyster: {
     number: 91,
@@ -909,7 +909,7 @@ export const pokemonData = {
     def: 180,
     speed: 70,
     special: 85,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Gastly: {
     number: 92,
@@ -949,7 +949,7 @@ export const pokemonData = {
     def: 160,
     speed: 70,
     special: 30,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Drowzee: {
     number: 96,
@@ -959,7 +959,7 @@ export const pokemonData = {
     def: 45,
     speed: 42,
     special: 90,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Hypno: {
     number: 97,
@@ -969,7 +969,7 @@ export const pokemonData = {
     def: 70,
     speed: 67,
     special: 115,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Krabby: {
     number: 98,
@@ -979,7 +979,7 @@ export const pokemonData = {
     def: 90,
     speed: 50,
     special: 25,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Kingler: {
     number: 99,
@@ -989,7 +989,7 @@ export const pokemonData = {
     def: 115,
     speed: 75,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Voltorb: {
     number: 100,
@@ -999,7 +999,7 @@ export const pokemonData = {
     def: 50,
     speed: 100,
     special: 55,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Electrode: {
     number: 101,
@@ -1009,7 +1009,7 @@ export const pokemonData = {
     def: 70,
     speed: 140,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Exeggcute: {
     number: 102,
@@ -1019,7 +1019,7 @@ export const pokemonData = {
     def: 80,
     speed: 40,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Exeggutor: {
     number: 103,
@@ -1029,7 +1029,7 @@ export const pokemonData = {
     def: 85,
     speed: 55,
     special: 125,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Cubone: {
     number: 104,
@@ -1039,7 +1039,7 @@ export const pokemonData = {
     def: 95,
     speed: 35,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Marowak: {
     number: 105,
@@ -1049,7 +1049,7 @@ export const pokemonData = {
     def: 110,
     speed: 45,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Hitmonlee: {
     number: 106,
@@ -1059,7 +1059,7 @@ export const pokemonData = {
     def: 53,
     speed: 87,
     special: 35,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Hitmonchan: {
     number: 107,
@@ -1069,7 +1069,7 @@ export const pokemonData = {
     def: 79,
     speed: 76,
     special: 35,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Lickitung: {
     number: 108,
@@ -1079,7 +1079,7 @@ export const pokemonData = {
     def: 75,
     speed: 30,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Koffing: {
     number: 109,
@@ -1089,7 +1089,7 @@ export const pokemonData = {
     def: 95,
     speed: 35,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Weezing: {
     number: 110,
@@ -1099,7 +1099,7 @@ export const pokemonData = {
     def: 120,
     speed: 60,
     special: 85,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Rhyhorn: {
     number: 111,
@@ -1109,7 +1109,7 @@ export const pokemonData = {
     def: 95,
     speed: 25,
     special: 30,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Rhydon: {
     number: 112,
@@ -1119,7 +1119,7 @@ export const pokemonData = {
     def: 120,
     speed: 40,
     special: 45,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Chansey: {
     number: 113,
@@ -1129,7 +1129,7 @@ export const pokemonData = {
     def: 5,
     speed: 50,
     special: 105,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.FAST,
   },
   Tangela: {
     number: 114,
@@ -1139,7 +1139,7 @@ export const pokemonData = {
     def: 115,
     speed: 60,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Kangaskhan: {
     number: 115,
@@ -1149,7 +1149,7 @@ export const pokemonData = {
     def: 80,
     speed: 90,
     special: 40,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Horsea: {
     number: 116,
@@ -1159,7 +1159,7 @@ export const pokemonData = {
     def: 70,
     speed: 60,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Seadra: {
     number: 117,
@@ -1169,7 +1169,7 @@ export const pokemonData = {
     def: 95,
     speed: 85,
     special: 95,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Goldeen: {
     number: 118,
@@ -1179,7 +1179,7 @@ export const pokemonData = {
     def: 60,
     speed: 63,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Seaking: {
     number: 119,
@@ -1189,7 +1189,7 @@ export const pokemonData = {
     def: 65,
     speed: 68,
     special: 80,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Staryu: {
     number: 120,
@@ -1199,7 +1199,7 @@ export const pokemonData = {
     def: 55,
     speed: 85,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Starmie: {
     number: 121,
@@ -1209,7 +1209,7 @@ export const pokemonData = {
     def: 85,
     speed: 115,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   MrMime: {
     number: 122,
@@ -1219,7 +1219,7 @@ export const pokemonData = {
     def: 65,
     speed: 90,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Scyther: {
     number: 123,
@@ -1229,7 +1229,7 @@ export const pokemonData = {
     def: 80,
     speed: 105,
     special: 55,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Jynx: {
     number: 124,
@@ -1239,7 +1239,7 @@ export const pokemonData = {
     def: 35,
     speed: 95,
     special: 95,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Electabuzz: {
     number: 125,
@@ -1249,7 +1249,7 @@ export const pokemonData = {
     def: 57,
     speed: 105,
     special: 85,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Magmar: {
     number: 126,
@@ -1259,7 +1259,7 @@ export const pokemonData = {
     def: 57,
     speed: 93,
     special: 85,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Pinsir: {
     number: 127,
@@ -1269,7 +1269,7 @@ export const pokemonData = {
     def: 100,
     speed: 85,
     special: 55,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Tauros: {
     number: 128,
@@ -1279,7 +1279,7 @@ export const pokemonData = {
     def: 95,
     speed: 110,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Magikarp: {
     number: 129,
@@ -1289,7 +1289,7 @@ export const pokemonData = {
     def: 55,
     speed: 80,
     special: 20,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Gyarados: {
     number: 130,
@@ -1299,7 +1299,7 @@ export const pokemonData = {
     def: 79,
     speed: 81,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Lapras: {
     number: 131,
@@ -1309,7 +1309,7 @@ export const pokemonData = {
     def: 80,
     speed: 60,
     special: 95,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Ditto: {
     number: 132,
@@ -1319,7 +1319,7 @@ export const pokemonData = {
     def: 48,
     speed: 48,
     special: 48,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Eevee: {
     number: 133,
@@ -1329,7 +1329,7 @@ export const pokemonData = {
     def: 50,
     speed: 55,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Vaporeon: {
     number: 134,
@@ -1339,7 +1339,7 @@ export const pokemonData = {
     def: 60,
     speed: 65,
     special: 110,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Jolteon: {
     number: 135,
@@ -1349,7 +1349,7 @@ export const pokemonData = {
     def: 60,
     speed: 130,
     special: 110,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Flareon: {
     number: 136,
@@ -1359,7 +1359,7 @@ export const pokemonData = {
     def: 60,
     speed: 65,
     special: 110,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Porygon: {
     number: 137,
@@ -1369,7 +1369,7 @@ export const pokemonData = {
     def: 70,
     speed: 40,
     special: 75,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Omanyte: {
     number: 138,
@@ -1379,7 +1379,7 @@ export const pokemonData = {
     def: 100,
     speed: 35,
     special: 90,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Omastar: {
     number: 139,
@@ -1389,7 +1389,7 @@ export const pokemonData = {
     def: 125,
     speed: 55,
     special: 115,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Kabuto: {
     number: 140,
@@ -1399,7 +1399,7 @@ export const pokemonData = {
     def: 90,
     speed: 55,
     special: 45,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Kabutops: {
     number: 141,
@@ -1409,7 +1409,7 @@ export const pokemonData = {
     def: 105,
     speed: 80,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_FAST,
   },
   Aerodactyl: {
     number: 142,
@@ -1419,7 +1419,7 @@ export const pokemonData = {
     def: 65,
     speed: 130,
     special: 60,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Snorlax: {
     number: 143,
@@ -1429,7 +1429,7 @@ export const pokemonData = {
     def: 65,
     speed: 30,
     special: 65,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Articuno: {
     number: 144,
@@ -1439,7 +1439,7 @@ export const pokemonData = {
     def: 100,
     speed: 85,
     special: 125,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Zapdos: {
     number: 145,
@@ -1449,7 +1449,7 @@ export const pokemonData = {
     def: 85,
     speed: 100,
     special: 125,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Moltres: {
     number: 146,
@@ -1459,7 +1459,7 @@ export const pokemonData = {
     def: 90,
     speed: 90,
     special: 125,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Dratini: {
     number: 147,
@@ -1469,7 +1469,7 @@ export const pokemonData = {
     def: 45,
     speed: 50,
     special: 50,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Dragonair: {
     number: 148,
@@ -1479,7 +1479,7 @@ export const pokemonData = {
     def: 65,
     speed: 70,
     special: 70,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Dragonite: {
     number: 149,
@@ -1489,7 +1489,7 @@ export const pokemonData = {
     def: 95,
     speed: 80,
     special: 100,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Mewtwo: {
     number: 150,
@@ -1499,7 +1499,7 @@ export const pokemonData = {
     def: 90,
     speed: 130,
     special: 154,
-    expRateType: POKEMON_EXP_RATE_TYPES.MEDIUM_SLOW,
+    expRateType: POKEMON_EXP_RATE_TYPES.SLOW,
   },
   Mew: {
     number: 151,
