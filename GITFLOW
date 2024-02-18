@@ -1,0 +1,6 @@
+1. git checkout main //go to main
+2. git pull origin main //update code
+3. git checkout -b features/{feature-name} //create branch for your feature
+4. git commit ... //commit your code
+5. git push ... //push your changes
+6. go to github and create the pull request
