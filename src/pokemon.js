@@ -1,14 +1,14 @@
 import { POKEMON_EXP_RATE_TYPES } from "./consts.js";
-import { levelCalcSlow, levelCalcMediumFast, levelCalcMediumSlow, levelCalcFast } from "./pokemonExpRateTypes.js";
+import {
+  levelCalcSlow,
+  levelCalcMediumFast,
+  levelCalcMediumSlow,
+  levelCalcFast,
+} from "./pokemonExpRateTypes.js";
 
 export class Pokemon {
   #number;
   #name;
-  #hp;
-  #attack;
-  #special;
-  #def;
-  #speed;
   #level;
   #exp;
   #expRateType;
@@ -19,18 +19,25 @@ export class Pokemon {
   #baseDef;
   #baseSpeed;
 
-  constructor({ number, name, hp, attack, special, def, speed, level = 1, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed }) {
+  constructor({
+    number,
+    name,
+    level = 1,
+    exp = 0,
+    expRateType,
+    currentHp,
+    baseHp,
+    baseAttack,
+    baseSpecial,
+    baseDef,
+    baseSpeed,
+  }) {
     this.#number = number;
     this.#name = name;
-    this.#hp = hp;
-    this.#attack = attack;
-    this.#special = special;
-    this.#def = def;
-    this.#speed = speed;
     this.#level = level;
     this.#exp = exp;
     this.#expRateType = expRateType;
-    this.#currentHp = currentHp ?? hp;
+    this.#currentHp = currentHp ?? baseHp;
     this.#baseHp = baseHp;
     this.#baseAttack = baseAttack;
     this.#baseSpecial = baseSpecial;
@@ -46,28 +53,8 @@ export class Pokemon {
     return this.#name;
   }
 
-  getHp() {
-    return this.#hp;
-  }
-
   getCurrentHp() {
     return this.#currentHp;
-  }
-
-  getAttack() {
-    return this.#attack;
-  }
-
-  getSpecial() {
-    return this.#special;
-  }
-
-  getDef() {
-    return this.#def;
-  }
-
-  getSpeed() {
-    return this.#speed;
   }
 
   getLevel() {
@@ -76,20 +63,6 @@ export class Pokemon {
 
   isAlive() {
     return this.#currentHp > 0;
-  }
-
-  getStatus() {
-    const status = {
-      hp: this.#hp,
-      attack: this.#attack,
-      special: this.#special,
-      def: this.#def,
-      speed: this.#speed,
-      level: this.#level,
-      exp: this.#exp,
-    };
-
-    return status;
   }
 
   getNextLevelExp() {
@@ -119,7 +92,7 @@ export class Pokemon {
   }
 
   getBaseSpecial() {
-    return this.#baseSpecial
+    return this.#baseSpecial;
   }
 
   getBaseDef() {

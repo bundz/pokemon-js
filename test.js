@@ -1,13 +1,9 @@
-import fs from "fs";
+import { Zapdos } from "./src/pokemon/zapdos.js";
 
-// const buffer = fs.readFileSync("./texto");
+const zapdos = new Zapdos();
 
-// const text = buffer.toString();
-
-// fs.writeFileSync(
-//   "./texto",
-//   `${text}
-// - Created by Jackão`
-// );
-
-fs.rmSync("./text");
+console.log(zapdos.getBaseHp());
+console.log(zapdos.getBaseAttack());
+console.log(zapdos.getBaseDef());
+console.log(zapdos.getBaseSpecial());
+console.log(zapdos.getBaseSpeed());
