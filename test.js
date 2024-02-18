@@ -1,9 +1,21 @@
-import { Zapdos } from "./src/pokemon/zapdos.js";
+import { Pikachu } from "./src/pokemon/pikachu.js";
 
-const zapdos = new Zapdos();
+const iv = {
+  hp: 7,
+  attack: 8,
+  def: 13,
+  special: 9,
+  speed: 5,
+};
 
-console.log(zapdos.getBaseHp());
-console.log(zapdos.getBaseAttack());
-console.log(zapdos.getBaseDef());
-console.log(zapdos.getBaseSpecial());
-console.log(zapdos.getBaseSpeed());
+const ev = {
+  hp: 22850,
+  attack: 23140,
+  def: 17280,
+  special: 19625,
+  speed: 24795,
+};
+
+const pikachu = new Pikachu({ level: 81, iv, ev });
+
+console.log(pikachu.hp);

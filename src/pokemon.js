@@ -1,10 +1,5 @@
 import { POKEMON_EXP_RATE_TYPES } from "./consts.js";
-import {
-  levelCalcSlow,
-  levelCalcMediumFast,
-  levelCalcMediumSlow,
-  levelCalcFast,
-} from "./pokemonExpRateTypes.js";
+import { levelCalcSlow, levelCalcMediumFast, levelCalcMediumSlow, levelCalcFast } from "./pokemonExpRateTypes.js";
 
 export class Pokemon {
   #number;
@@ -18,20 +13,18 @@ export class Pokemon {
   #baseSpecial;
   #baseDef;
   #baseSpeed;
+  #ivHp;
+  #ivAttack;
+  #ivDef;
+  #ivSpecial;
+  #ivSpeed;
+  #evHp;
+  #evAttack;
+  #evDef;
+  #evSpecial;
+  #evSpeed;
 
-  constructor({
-    number,
-    name,
-    level = 1,
-    exp = 0,
-    expRateType,
-    currentHp,
-    baseHp,
-    baseAttack,
-    baseSpecial,
-    baseDef,
-    baseSpeed,
-  }) {
+  constructor({ number, name, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed }, { level = 1, iv, ev }) {
     this.#number = number;
     this.#name = name;
     this.#level = level;
@@ -43,21 +36,31 @@ export class Pokemon {
     this.#baseSpecial = baseSpecial;
     this.#baseDef = baseDef;
     this.#baseSpeed = baseSpeed;
+    this.#ivHp = iv.hp;
+    this.#ivAttack = iv.attack;
+    this.#ivDef = iv.def;
+    this.#ivSpecial = iv.special;
+    this.#ivSpeed = iv.speed;
+    this.#evHp = ev.hp;
+    this.#evAttack = ev.attack;
+    this.#evDef = ev.def;
+    this.#evSpecial = ev.special;
+    this.#evSpeed = ev.speed;
   }
 
-  getNumber() {
+  get number() {
     return this.#number;
   }
 
-  getName() {
+  get name() {
     return this.#name;
   }
 
-  getCurrentHp() {
+  get currentHp() {
     return this.#currentHp;
   }
 
-  getLevel() {
+  get level() {
     return this.#level;
   }
 
@@ -83,24 +86,28 @@ export class Pokemon {
     }
   }
 
-  getBaseHp() {
+  get baseHp() {
     return this.#baseHp;
   }
 
-  getBaseAttack() {
+  get baseAttack() {
     return this.#baseAttack;
   }
 
-  getBaseSpecial() {
+  get baseSpecial() {
     return this.#baseSpecial;
   }
 
-  getBaseDef() {
+  get baseDef() {
     return this.#baseDef;
   }
 
-  getBaseSpeed() {
+  get baseSpeed() {
     return this.#baseSpeed;
+  }
+
+  get hp() {
+    return Math.floor((((this.#baseHp + this.#ivHp) * 2 + Math.floor(Math.sqrt(this.#evHp) / 4)) * this.#level) / 100) + this.#level + 10;
   }
 
   gainExp(exp) {

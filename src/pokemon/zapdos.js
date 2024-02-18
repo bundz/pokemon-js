@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Zapdos extends Pokemon {
-    constructor() {
-      super(pokemonData.Zapdos);
-    }
+export class Zapdos extends Pokemon {
+  constructor({ iv, ev }) {
+    super(pokemonData.Zapdos, { iv, ev });
   }
-  
+}
