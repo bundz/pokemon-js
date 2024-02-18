@@ -13,8 +13,13 @@ export class Pokemon {
   #exp;
   #expRateType;
   #currentHp;
+  #baseHp;
+  #baseAttack;
+  #baseSpecial;
+  #baseDef;
+  #baseSpeed;
 
-  constructor({ number, name, hp, attack, special, def, speed, level = 1, exp = 0, expRateType, currentHp }) {
+  constructor({ number, name, hp, attack, special, def, speed, level = 1, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed }) {
     this.#number = number;
     this.#name = name;
     this.#hp = hp;
@@ -26,6 +31,11 @@ export class Pokemon {
     this.#exp = exp;
     this.#expRateType = expRateType;
     this.#currentHp = currentHp ?? hp;
+    this.#baseHp = baseHp;
+    this.#baseAttack = baseAttack;
+    this.#baseSpecial = baseSpecial;
+    this.#baseDef = baseDef;
+    this.#baseSpeed = baseSpeed;
   }
 
   getNumber() {
@@ -98,6 +108,26 @@ export class Pokemon {
     if (this.#expRateType == POKEMON_EXP_RATE_TYPES.FAST) {
       return levelCalcFast(this.#level + 1);
     }
+  }
+
+  getBaseHp() {
+    return this.#baseHp;
+  }
+
+  getBaseAttack() {
+    return this.#baseAttack;
+  }
+
+  getBaseSpecial() {
+    return this.#baseSpecial
+  }
+
+  getBaseDef() {
+    return this.#baseDef;
+  }
+
+  getBaseSpeed() {
+    return this.#baseSpeed;
   }
 
   gainExp(exp) {
