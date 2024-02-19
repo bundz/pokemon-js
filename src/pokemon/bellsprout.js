@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Bellsprout extends Pokemon {
-    constructor() {
-      super(pokemonData.Bellsprout);
-    }
+export class Bellsprout extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Bellsprout, { level, iv, ev });
   }
-  
+}

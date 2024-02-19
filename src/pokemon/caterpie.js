@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Caterpie extends Pokemon {
-    constructor() {
-      super(pokemonData.Caterpie);
-    }
+export class Caterpie extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Caterpie, { level, iv, ev });
   }
-  
+}

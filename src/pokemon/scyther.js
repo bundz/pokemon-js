@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Scyther extends Pokemon {
-    constructor() {
-      super(pokemonData.Scyther);
-    }
+export class Scyther extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Scyther, { level, iv, ev });
   }
-  
+}

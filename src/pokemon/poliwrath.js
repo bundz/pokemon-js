@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Poliwrath extends Pokemon {
-    constructor() {
-      super(pokemonData.Poliwrath);
-    }
+export class Poliwrath extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Poliwrath, { level, iv, ev });
   }
-  
+}

@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Sandshrew extends Pokemon {
-    constructor() {
-      super(pokemonData.Sandshrew);
-    }
+export class Sandshrew extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Sandshrew, { level, iv, ev });
   }
-  
+}

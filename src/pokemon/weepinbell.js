@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Weepinbell extends Pokemon {
-    constructor() {
-      super(pokemonData.Weepinbell);
-    }
+export class Weepinbell extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Weepinbell, { level, iv, ev });
   }
-  
+}

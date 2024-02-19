@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Clefable extends Pokemon {
-    constructor() {
-      super(pokemonData.Clefable);
-    }
+export class Clefable extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Clefable, { level, iv, ev });
   }
-  
+}

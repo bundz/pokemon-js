@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Nidoking extends Pokemon {
-    constructor() {
-      super(pokemonData.Nidoking);
-    }
+export class Nidoking extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Nidoking, { level, iv, ev });
   }
-  
+}

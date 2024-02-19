@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Bulbasaur extends Pokemon {
-    constructor() {
-      super(pokemonData.Bulbasaur);
-    }
+export class Bulbasaur extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Bulbasaur, { level, iv, ev });
   }
-  
+}

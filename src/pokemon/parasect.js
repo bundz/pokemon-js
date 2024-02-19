@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Parasect extends Pokemon {
-    constructor() {
-      super(pokemonData.Parasect);
-    }
+export class Parasect extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Parasect, { level, iv, ev });
   }
-  
+}

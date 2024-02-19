@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Vulpix extends Pokemon {
-    constructor() {
-      super(pokemonData.Vulpix);
-    }
+export class Vulpix extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Vulpix, { level, iv, ev });
   }
-  
+}
