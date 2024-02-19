@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Dugtrio extends Pokemon {
-    constructor() {
-      super(pokemonData.Dugtrio);
-    }
+export class Dugtrio extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Dugtrio, { level, iv, ev });
   }
-  
+}

@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Cubone extends Pokemon {
-    constructor() {
-      super(pokemonData.Cubone);
-    }
+export class Cubone extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Cubone, { level, iv, ev });
   }
-  
+}

@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Onix extends Pokemon {
-    constructor() {
-      super(pokemonData.Onix);
-    }
+export class Onix extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Onix, { level, iv, ev });
   }
-  
+}

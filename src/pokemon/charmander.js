@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Charmander extends Pokemon {
-    constructor() {
-      super(pokemonData.Charmander);
-    }
+export class Charmander extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Charmander, { level, iv, ev });
   }
-  
+}

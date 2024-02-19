@@ -1,10 +1,8 @@
+import { Pokemon } from "../pokemon.js";
+import { pokemonData } from "../pokemonData.js";
 
-  import { Pokemon } from "../pokemon.js";
-  import { pokemonData } from "../pokemonData.js";
-  
-  export class Weedle extends Pokemon {
-    constructor() {
-      super(pokemonData.Weedle);
-    }
+export class Weedle extends Pokemon {
+  constructor({ level, iv, ev }) {
+    super(pokemonData.Weedle, { level, iv, ev });
   }
-  
+}
