@@ -1,22 +1,22 @@
-- Create new attributes
- - baseAttack
- - baseDefense
- - baseSpecial
- - baseSpeed
- - baseHP
- - attackIV
- - defenseIV
- - specialIV
- - speedIV
- - hpIV
- - attackEV
- - defenseEV
- - specialEV
- - speedEV
- - hpEV
-- Calculate attributes based on baseStats, Level, IV and EV
-- Change all pokemon xp rate
-- Attacks
+- Create new attributes (done)
+ - baseAttack (done)
+ - baseDefense (done)
+ - baseSpecial (done)
+ - baseSpeed (done)
+ - baseHP (done)
+ - attackIV (done)
+ - defenseIV (done)
+ - specialIV (done)
+ - speedIV (done)
+ - hpIV (done)
+ - attackEV (done)
+ - defenseEV (done)
+ - specialEV (done)
+ - speedEV (done)
+ - hpEV (done)
+- Calculate attributes based on baseStats, Level, IV and EV (done)
+- Change all pokemon xp rate (done)
+- Attacks <-
 - Items
 - Battle
 - Capture
