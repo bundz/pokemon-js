@@ -1,4 +1,4 @@
-import { POKEMON_EXP_RATE_TYPES } from "./consts.js";
+import { POKEMON_EXP_RATE_TYPES } from "../src/consts.js";
 
 export const pokemonData = {
   Bulbasaur: {

@@ -1,10 +1,5 @@
-import { POKEMON_EXP_RATE_TYPES } from "./consts.js";
-import {
-  levelCalcSlow,
-  levelCalcMediumFast,
-  levelCalcMediumSlow,
-  levelCalcFast,
-} from "./pokemonExpRateTypes.js";
+import { POKEMON_EXP_RATE_TYPES } from "../consts.js";
+import { levelCalcSlow, levelCalcMediumFast, levelCalcMediumSlow, levelCalcFast } from "../utils/levelXpCalc.js";
 
 export class Pokemon {
   #number;
@@ -29,21 +24,7 @@ export class Pokemon {
   #evSpecial;
   #evSpeed;
 
-  constructor(
-    {
-      number,
-      name,
-      exp = 0,
-      expRateType,
-      currentHp,
-      baseHp,
-      baseAttack,
-      baseSpecial,
-      baseDef,
-      baseSpeed,
-    },
-    { level = 1, iv, ev }
-  ) {
+  constructor({ number, name, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed }, { level = 1, iv, ev }) {
     this.#number = number;
     this.#name = name;
     this.#level = level;
@@ -126,56 +107,23 @@ export class Pokemon {
   }
 
   get hp() {
-    return (
-      Math.floor(
-        (((this.#baseHp + this.#ivHp) * 2 +
-          Math.floor(Math.sqrt(this.#evHp) / 4)) *
-          this.#level) /
-          100
-      ) +
-      this.#level +
-      10
-    );
+    return Math.floor((((this.#baseHp + this.#ivHp) * 2 + Math.floor(Math.sqrt(this.#evHp) / 4)) * this.#level) / 100) + this.#level + 10;
   }
 
   get ivAttack() {
-    return (
-      Math.floor(
-        ((this.#baseAttack + this.#ivAttack) * 2 +
-          Math.floor(Math.sqrt(this.#evAttack / 4) * this.#level)) /
-          100
-      ) + 5
-    );
+    return Math.floor(((this.#baseAttack + this.#ivAttack) * 2 + Math.floor(Math.sqrt(this.#evAttack / 4) * this.#level)) / 100) + 5;
   }
 
   get ivDef() {
-    return (
-      Math.floor(
-        ((this.#baseDef + this.#ivDef) * 2 +
-          Math.floor(Math.sqrt(this.#evDef / 4) * this.#level)) /
-          100
-      ) + 5
-    );
+    return Math.floor(((this.#baseDef + this.#ivDef) * 2 + Math.floor(Math.sqrt(this.#evDef / 4) * this.#level)) / 100) + 5;
   }
 
   get ivsSpecial() {
-    return (
-      Math.floor(
-        ((this.#baseSpecial + this.#ivSpecial) * 2 +
-          Math.floor(Math.sqrt(this.#evSpecial / 4) * this.#level)) /
-          100
-      ) + 5
-    );
+    return Math.floor(((this.#baseSpecial + this.#ivSpecial) * 2 + Math.floor(Math.sqrt(this.#evSpecial / 4) * this.#level)) / 100) + 5;
   }
 
   get ivSpeed() {
-    return (
-      Math.floor(
-        ((this.#baseSpeed + this.#ivSpeed) * 2 +
-          Math.floor(Math.sqrt(this.#evSpeed / 4) * this.#level)) /
-          100
-      ) + 5
-    );
+    return Math.floor(((this.#baseSpeed + this.#ivSpeed) * 2 + Math.floor(Math.sqrt(this.#evSpeed / 4) * this.#level)) / 100) + 5;
   }
 
   gainExp(exp) {
