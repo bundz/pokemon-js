@@ -9,23 +9,3 @@
 //DEF: {the resulting def}
 //SPECIAL: {the resulting special}
 //SPEED: {the resulting speed}
-
-import { Bulbasaur } from "../src/pokemon/bulbasaur";
-
-const iv = {
-  hp: 15,
-  attack: 10,
-  def: 12,
-  special: 14,
-  speed: 10,
-};
-
-const ev = {
-  hp: 0,
-  attack: 0,
-  def: 0,
-  special: 0,
-  speed: 0,
-};
-
-const bulbasaur = new Bulbasaur({ iv, ev, level: 14 });
