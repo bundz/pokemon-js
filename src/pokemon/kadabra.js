@@ -1,4 +1,4 @@
-import { Pokemon } from "../pokemon.js";
+import { Pokemon } from "../base/pokemon.js";
 import { pokemonData } from "../../data/pokemon.js";
 
 export class Kadabra extends Pokemon {
