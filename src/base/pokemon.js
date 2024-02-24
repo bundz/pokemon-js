@@ -110,20 +110,20 @@ export class Pokemon {
     return Math.floor((((this.#baseHp + this.#ivHp) * 2 + Math.floor(Math.sqrt(this.#evHp) / 4)) * this.#level) / 100) + this.#level + 10;
   }
 
-  get ivAttack() {
-    return Math.floor(((this.#baseAttack + this.#ivAttack) * 2 + Math.floor(Math.sqrt(this.#evAttack / 4) * this.#level)) / 100) + 5;
+  get attack() {
+    return Math.floor((((this.#baseAttack + this.#ivAttack) * 2 + Math.floor(Math.sqrt(this.#evAttack) / 4)) * this.#level) / 100) + 5;
   }
 
-  get ivDef() {
-    return Math.floor(((this.#baseDef + this.#ivDef) * 2 + Math.floor(Math.sqrt(this.#evDef / 4) * this.#level)) / 100) + 5;
+  get def() {
+    return Math.floor((((this.#baseDef + this.#ivDef) * 2 + Math.floor(Math.sqrt(this.#evDef) / 4)) * this.#level) / 100) + 5;
   }
 
-  get ivsSpecial() {
-    return Math.floor(((this.#baseSpecial + this.#ivSpecial) * 2 + Math.floor(Math.sqrt(this.#evSpecial / 4) * this.#level)) / 100) + 5;
+  get special() {
+    return Math.floor((((this.#baseSpecial + this.#ivSpecial) * 2 + Math.floor(Math.sqrt(this.#evSpecial) / 4)) * this.#level) / 100) + 5;
   }
 
-  get ivSpeed() {
-    return Math.floor(((this.#baseSpeed + this.#ivSpeed) * 2 + Math.floor(Math.sqrt(this.#evSpeed / 4) * this.#level)) / 100) + 5;
+  get speed() {
+    return Math.floor((((this.#baseSpeed + this.#ivSpeed) * 2 + Math.floor(Math.sqrt(this.#evSpeed) / 4)) * this.#level) / 100) + 5;
   }
 
   gainExp(exp) {
