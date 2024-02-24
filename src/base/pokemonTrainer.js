@@ -13,15 +13,15 @@ export class PokemonTrainer {
     this.#pc = new PC();
   }
 
-  getName() {
+  get name() {
     return this.#name;
   }
 
-  getParty() {
+  get party() {
     return this.#party;
   }
 
-  getMoney() {
+  get money() {
     return this.#money;
   }
 
@@ -33,7 +33,7 @@ export class PokemonTrainer {
     }
   }
 
-  getPC() {
+  get pc() {
     return this.#pc;
   }
 
@@ -48,7 +48,9 @@ export class PokemonTrainer {
 
   printParty() {
     for (const pokemon of this.#party) {
-      console.log(`${pokemon.getName()} - Level ${pokemon.getLevel()} - HP ${pokemon.getHp()}`);
+      console.log(
+        `${pokemon.getName()} - Level ${pokemon.getLevel()} - HP ${pokemon.getHp()}`
+      );
     }
   }
 }
