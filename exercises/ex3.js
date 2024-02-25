@@ -12,7 +12,6 @@
 
 //Then print the number of pokemons in the pc
 
-
 import { Bulbasaur } from "../src/pokemon/bulbasaur.js";
 import { Charmander } from "../src/pokemon/charmander.js";
 import { Magikarp } from "../src/pokemon/magikarp.js";
@@ -38,7 +37,6 @@ const ev = {
   speed: 0,
 };
 
-
 const jubileu = new PokemonTrainer({ name: "Jubileu", party: [], money: 0 });
 const bulbasaur = new Bulbasaur({ level: 5, iv, ev });
 const charmander = new Charmander({ level: 5, iv, ev });
@@ -57,13 +55,13 @@ jubileu.addPokemon(hitmonchan);
 jubileu.addPokemon(abra);
 
 console.log(`Party
-${bulbasaur.name} - Lv. ${bulbasaur.level} - Grass, Poison
+${bulbasaur.name} - Lv. ${bulbasaur.level} - ${bulbasaur.type1}, ${bulbasaur.type2}
 ${charmander.name} - Lv. ${charmander.level} - Fire
 ${magikarp.name} - Lv. ${magikarp.level} - Water
 ${mew.name} - Lv. ${mew.level} - Psychic
 ${mewtwo.name} - Lv. ${mewtwo.level} - Psychic
 ${hitmonchan.name} - Lv. ${hitmonchan.level} - Fighting`);
-console.log(jubileu);
+console.log(jubileu.pc.box);
 //jubileu.pc = PC{};
 //jubileu.printBox() = is not a function;
 //jubileu.party.length = 6;

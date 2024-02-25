@@ -1,3 +1,2 @@
-//Create 2 pokemon trainers with any number of pokemons
-//Calculate which have the strongest
-//Calculate which are missing
+//Create 1 pokemon trainers with any number of pokemons
+//Calculate how many of each pokemon the trainer have

@@ -4,6 +4,8 @@ import { levelCalcSlow, levelCalcMediumFast, levelCalcMediumSlow, levelCalcFast 
 export class Pokemon {
   #number;
   #name;
+  #type1;
+  #type2;
   #level;
   #exp;
   #expRateType;
@@ -24,9 +26,14 @@ export class Pokemon {
   #evSpecial;
   #evSpeed;
 
-  constructor({ number, name, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed }, { level = 1, iv, ev }) {
+  constructor(
+    { number, name, type1, type2, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed },
+    { level = 1, iv, ev }
+  ) {
     this.#number = number;
     this.#name = name;
+    this.#type1 = type1;
+    this.#type2 = type2;
     this.#level = level;
     this.#exp = exp;
     this.#expRateType = expRateType;
@@ -54,6 +61,14 @@ export class Pokemon {
 
   get name() {
     return this.#name;
+  }
+
+  get type1() {
+    return this.#type1;
+  }
+
+  get type2() {
+    return this.#type2;
   }
 
   get currentHp() {
