@@ -9,5 +9,9 @@ export class PC {
     this.#box.push(pokemon);
   }
 
+  get box() {
+    return this.#box;
+  }
+
   printBox() {}
 }
