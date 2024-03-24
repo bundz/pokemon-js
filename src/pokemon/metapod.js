@@ -2,7 +2,7 @@ import { Pokemon } from "../base/pokemon.js";
 import pokemonData from "../../data/pokemon.json" assert { type: "json" };
 
 export class Metapod extends Pokemon {
-  constructor({ level, iv, ev }) {
-    super(pokemonData.Metapod, { level, iv, ev });
+  constructor({ level, iv, ev }, moves) {
+    super(pokemonData.Metapod, { level, iv, ev }, moves);
   }
 }

@@ -25,10 +25,12 @@ export class Pokemon {
   #evDef;
   #evSpecial;
   #evSpeed;
+  #moves;
 
   constructor(
     { number, name, type1, type2, exp = 0, expRateType, currentHp, baseHp, baseAttack, baseSpecial, baseDef, baseSpeed },
-    { level = 1, iv, ev }
+    { level = 1, iv, ev },
+    moves = []
   ) {
     this.#number = number;
     this.#name = name;
@@ -53,6 +55,7 @@ export class Pokemon {
     this.#evDef = ev.def;
     this.#evSpecial = ev.special;
     this.#evSpeed = ev.speed;
+    this.#moves = moves;
   }
 
   get number() {
@@ -77,6 +80,10 @@ export class Pokemon {
 
   get level() {
     return this.#level;
+  }
+
+  get moves() {
+    return this.#moves;
   }
 
   isAlive() {

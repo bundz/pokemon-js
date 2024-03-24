@@ -1,4 +1,6 @@
 import { Pikachu } from "./src/pokemon/pikachu.js";
+import { Thunder } from "./src/moves/thunder.js";
+import { QuickAttack } from "./src/moves/quickAttack.js";
 
 const iv = {
   hp: 7,
@@ -16,6 +18,9 @@ const ev = {
   speed: 24795,
 };
 
-const pikachu = new Pikachu({ level: 81, iv, ev });
+const thunder = new Thunder();
+const quickAttack = new QuickAttack();
 
-console.log(pikachu.hp);
+const pikachu = new Pikachu({ level: 81, iv, ev }, [thunder, quickAttack]);
+
+console.log(pikachu.moves);
