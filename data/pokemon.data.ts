@@ -734,7 +734,7 @@ export const PokemonData = {
     name: "Gastly",
     baseStats: { hp: 30, attack: 35, def: 30, speed: 80, special: 100 },
     expRateType: ExpRateType.MediumSlow,
-    type1: "Ghost",
+    type1: PokemonType.Ghost,
     type2: PokemonType.Poison,
   },
   Haunter: {
@@ -742,7 +742,7 @@ export const PokemonData = {
     name: "Haunter",
     baseStats: { hp: 45, attack: 50, def: 45, speed: 95, special: 115 },
     expRateType: ExpRateType.MediumSlow,
-    type1: "Ghost",
+    type1: PokemonType.Ghost,
     type2: PokemonType.Poison,
   },
   Gengar: {
@@ -750,7 +750,7 @@ export const PokemonData = {
     name: "Gengar",
     baseStats: { hp: 60, attack: 65, def: 60, speed: 110, special: 130 },
     expRateType: ExpRateType.MediumSlow,
-    type1: "Ghost",
+    type1: PokemonType.Ghost,
     type2: PokemonType.Poison,
   },
   Onix: {
