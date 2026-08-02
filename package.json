@@ -5,11 +5,13 @@
   "main": "test.js",
   "type": "module",
   "scripts": {
+    "start": "npx tsx index",
     "test": "node ./node_modules/mocha/bin/mocha.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^26.1.2",
     "mocha": "^10.3.0"
   }
 }

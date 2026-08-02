@@ -49,7 +49,7 @@ export class PokemonTrainer {
   printParty() {
     for (const pokemon of this.#party) {
       console.log(
-        `${pokemon.getName()} - Level ${pokemon.getLevel()} - HP ${pokemon.getHp()}`
+        `${pokemon.name} - Level ${pokemon.level} - HP ${pokemon.hp}`,
       );
     }
   }
