@@ -5,6 +5,7 @@
   "main": "test.js",
   "type": "module",
   "scripts": {
+    "check": "tsc",
     "start": "npx tsx index",
     "test": "node ./node_modules/mocha/bin/mocha.js"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^26.1.2",
-    "mocha": "^10.3.0"
+    "mocha": "^10.3.0",
+    "typescript": "^7.0.2"
   }
 }

@@ -13,6 +13,7 @@ export enum PokemonType {
   Normal = "normal",
   Flying = "flying",
   Ice = "ice",
+  Ghost = "ghost",
 }
 
 export enum ExpRateType {
