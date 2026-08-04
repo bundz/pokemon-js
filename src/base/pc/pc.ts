@@ -6,12 +6,18 @@ export class PC {
   private _boxes: PCBox[] = [];
 
   constructor(pcBoxes?: IPCBox[]) {
+    if (pcBoxes && pcBoxes.length > 12) {
+      throw new Error("Number of boxes exceeded");
+    }
+
     this.fillBoxes(pcBoxes);
   }
 
   private fillBoxes(pcBoxes?: IPCBox[]) {
-    if (pcBoxes) {
-      for (const [i, box] of pcBoxes.entries()) {
+    const boxes = pcBoxes;
+
+    if (boxes) {
+      for (const [i, box] of boxes.entries()) {
         this._boxes[i] = new PCBox({ name: box.name, slots: box.slots });
       }
 

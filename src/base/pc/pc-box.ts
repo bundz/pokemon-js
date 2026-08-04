@@ -9,10 +9,10 @@ export class PCBox {
     let slots = pcBox.slots;
 
     if (!slots) {
-      slots = Array(12).fill(null);
+      slots = Array(20).fill(null);
     }
 
-    if (slots.length !== 12) {
+    if (slots.length !== 20) {
       throw new Error("PCBox length needs to be equal 12");
     }
 
@@ -21,7 +21,7 @@ export class PCBox {
   }
 
   addToSlot(index: number, pokemon: Pokemon) {
-    if (index > 11) {
+    if (index > 19) {
       throw new Error("Slot out of range");
     }
 
@@ -35,7 +35,7 @@ export class PCBox {
   }
 
   withdrawalFromSlot(index: number) {
-    if (index > 11) {
+    if (index > 19) {
       throw new Error("Slot out of range");
     }
 
@@ -58,5 +58,13 @@ export class PCBox {
     }
 
     return false;
+  }
+
+  get slots() {
+    return this._slots;
+  }
+
+  get name() {
+    return this._name;
   }
 }
