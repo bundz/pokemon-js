@@ -127,6 +127,10 @@ export class Pokemon {
     return this.currentHp > 0;
   }
 
+  isDefeated() {
+    return !this.isAlive;
+  }
+
   getNextLevelExp() {
     return NextLevelCalculator.calc(this._state.level, this._expRateType);
   }
