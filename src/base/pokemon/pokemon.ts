@@ -1,3 +1,8 @@
+import {
+  LAST_POKEMON_NUMBER,
+  PokemonData,
+  TOTAL_POKEMON_NUMBER,
+} from "../../../data/pokemon.data";
 import { NextLevelCalculator } from "./next-level-calculator.util";
 
 import {
@@ -8,29 +13,144 @@ import {
   PokemonState,
   PokemonBaseData,
   Stats,
+  EvolutionCondition,
+  EvolutionConditionLevel,
+  GainExpResult,
+  EvolutionStone,
+  EvolutionType,
+  EvolutionConditionStone,
+  EvolutionConditionTrade,
+  PokemonList,
 } from "./pokemon.type";
+import { PokemonValidator } from "./pokemon.validator";
 
 export class Pokemon {
   private _number: number;
-  private _name: string;
+  private _name: PokemonList;
   private _type1: PokemonType;
   private _type2: PokemonType | null;
   private _expRateType: ExpRateType;
   private _baseStats: PokemonBaseStats;
   private _statModifiers: PokemonStatModifiers;
   private _state: PokemonState;
+  private _evolutionConditions: EvolutionCondition[];
+
+  private canLevelUp() {
+    return this._state.exp >= this.getNextLevelExp() && this.level < 100;
+  }
+
+  private levelUp() {
+    this._state.level = this._state.level + 1;
+    const result = { hasLeveledUp: true, canEvolve: false };
+
+    if (this.canLevelUp()) {
+      this.levelUp();
+    }
+
+    result.canEvolve = this.canEvolveByLevelUp();
+    return result;
+  }
+
+  private getLevelEvolutionCondition(): EvolutionConditionLevel | undefined {
+    return this._evolutionConditions.find(
+      (c): c is EvolutionConditionLevel => "level" in c,
+    );
+  }
+
+  private getTradeEvolutionCondition(): EvolutionConditionTrade | undefined {
+    return this._evolutionConditions.find(
+      (c): c is EvolutionConditionTrade => "trade" in c,
+    );
+  }
+
+  private getStoneEvolutionCondition(
+    stone: EvolutionStone,
+  ): EvolutionConditionStone | undefined {
+    return this._evolutionConditions.find(
+      (c): c is EvolutionConditionStone => "stone" in c && c.stone === stone,
+    );
+  }
+
+  private canEvolveTo(pokemon: PokemonList) {
+    return this._evolutionConditions.find((c) => c.pokemon === pokemon);
+  }
+
+  private executeEvolution(pokemon: PokemonList) {
+    if (!this.canEvolveTo(pokemon)) {
+      throw new Error(`${this.name} can't evolve to ${pokemon}`);
+    }
+
+    const evolutionData = PokemonData[pokemon];
+
+    this._number = evolutionData.number;
+    this._name = evolutionData.name;
+    this._type1 = evolutionData.type1;
+    this._type2 = evolutionData.type2;
+    this._expRateType = evolutionData.expRateType;
+    this._baseStats = evolutionData.baseStats;
+    this._evolutionConditions = evolutionData.evolutionConditions;
+  }
+
+  private evolveByLevelUp() {
+    const levelUpCondition = this.getLevelEvolutionCondition();
+
+    if (!levelUpCondition) {
+      throw new Error("Pokemon don't have a level up evolution");
+    }
+
+    if (!this.canEvolveByLevelUp()) {
+      throw new Error("Pokemon can't evolve by level up");
+    }
+
+    this.executeEvolution(levelUpCondition.pokemon);
+  }
+
+  private evolveByStone(stone?: EvolutionStone) {
+    if (!stone) {
+      throw new Error("Stone is undefined");
+    }
+
+    const evolution = this.getStoneEvolutionCondition(stone);
+
+    if (!evolution) {
+      throw new Error(`${this._name} can't evolve by ${stone}`);
+    }
+
+    this.executeEvolution(evolution.pokemon);
+  }
+
+  private evolveByTrade() {
+    const tradeCondition = this.getTradeEvolutionCondition();
+
+    if (!tradeCondition) {
+      throw new Error(`${this._name} can't evolve by trade`);
+    }
+
+    this.executeEvolution(tradeCondition.pokemon);
+  }
 
   constructor(
     pokemonBaseData: PokemonBaseData,
     statModifiers: PokemonStatModifiers,
     state: PokemonState,
   ) {
+    const isValid = PokemonValidator.validate(
+      pokemonBaseData,
+      statModifiers,
+      state,
+    );
+
+    if (!isValid) {
+      throw new Error("Invalid pokemon data");
+    }
+
     this._number = pokemonBaseData.number;
     this._name = pokemonBaseData.name;
     this._type1 = pokemonBaseData.type1;
     this._type2 = pokemonBaseData.type2;
     this._expRateType = pokemonBaseData.expRateType;
     this._baseStats = pokemonBaseData.baseStats;
+    this._evolutionConditions = pokemonBaseData.evolutionConditions;
     this._statModifiers = statModifiers;
     this._state = state;
   }
@@ -112,6 +232,14 @@ export class Pokemon {
     return this.calculateStat(Stats.Speed);
   }
 
+  get state(): PokemonState {
+    return this._state;
+  }
+
+  get statModifiers(): PokemonStatModifiers {
+    return this._statModifiers;
+  }
+
   calculateStat(stat: Stats) {
     return (
       Math.floor(
@@ -135,23 +263,50 @@ export class Pokemon {
     return NextLevelCalculator.calc(this._state.level, this._expRateType);
   }
 
-  gainExp(exp: number) {
+  gainExp(exp: number): GainExpResult {
+    const result = { hasLeveledUp: false, canEvolve: false };
     if (this._state.level === 100) {
-      return;
+      return result;
     }
 
     this._state.exp = this._state.exp + exp;
-    this.checkLevelUp();
-  }
 
-  checkLevelUp() {
     if (this._state.exp >= this.getNextLevelExp()) {
-      this.levelUp();
+      return this.levelUp();
     }
+
+    return result;
   }
 
-  levelUp() {
-    this._state.exp = this._state.level + 1;
-    this.checkLevelUp();
+  canEvolveByLevelUp() {
+    const levelUpCondition = this.getLevelEvolutionCondition();
+
+    if (!levelUpCondition) {
+      return false;
+    }
+
+    if (this.state.level >= levelUpCondition.level) {
+      return true;
+    }
+
+    return false;
+  }
+
+  canEvolveByStone(stone: EvolutionStone) {
+    return this.getStoneEvolutionCondition(stone);
+  }
+
+  evolve(evolutionType: EvolutionType, stone?: EvolutionStone) {
+    if (evolutionType === EvolutionType.Level) {
+      return this.evolveByLevelUp();
+    }
+
+    if (evolutionType === EvolutionType.EvolutionStone) {
+      return this.evolveByStone(stone);
+    }
+
+    if (evolutionType === EvolutionType.Trade) {
+      return this.evolveByTrade();
+    }
   }
 }
