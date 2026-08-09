@@ -7,7 +7,9 @@ export class StatCalculator {
   ) {
     return (
       Math.floor(
-        (((baseStat + iv) * 2 + Math.floor(Math.sqrt(ev) / 4)) * level) / 100,
+        (((baseStat + iv) * 2 + Math.floor(Math.ceil(Math.sqrt(ev)) / 4)) *
+          level) /
+          100,
       ) + 5
     );
   }
@@ -15,7 +17,9 @@ export class StatCalculator {
   static calculateHp(baseHp: number, iv: number, ev: number, level: number) {
     return (
       Math.floor(
-        (((baseHp + iv) * 2 + Math.floor(Math.sqrt(ev) / 4)) * level) / 100,
+        (((baseHp + iv) * 2 + Math.floor(Math.ceil(Math.sqrt(ev)) / 4)) *
+          level) /
+          100,
       ) +
       level +
       10
