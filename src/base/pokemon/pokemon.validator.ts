@@ -41,7 +41,7 @@ const MOVES_LIMITS = {
 export class PokemonValidator {
   static validateNumber(number: number) {
     const isValid =
-      number > 0 && number < TOTAL_POKEMON_NUMBER && Number.isInteger(number);
+      number > 0 && number <= TOTAL_POKEMON_NUMBER && Number.isInteger(number);
 
     if (!isValid) {
       console.error(`${number} is not a valid number`);
@@ -200,6 +200,17 @@ export class PokemonValidator {
     if (moves.length > MOVES_LIMITS.MAX) {
       console.error(`Pokemon can't have more than 4 moves`);
       return false;
+    }
+
+    const moveSet: Record<string, boolean> = {};
+
+    for (const move of moves) {
+      if (moveSet[move.name]) {
+        console.log(`Pokemon has duplicated moves`);
+        return false;
+      }
+
+      moveSet[move.name] = true;
     }
 
     return true;

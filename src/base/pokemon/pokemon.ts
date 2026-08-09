@@ -251,11 +251,11 @@ export class Pokemon {
     return this._statModifiers;
   }
 
-  isAlive() {
+  get isAlive() {
     return this.currentHp > 0;
   }
 
-  isDefeated() {
+  get isDefeated() {
     return !this.isAlive;
   }
 
