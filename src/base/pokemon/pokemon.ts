@@ -260,7 +260,7 @@ export class Pokemon {
   }
 
   getNextLevelExp() {
-    return LevelCalculator.calc(this._state.level, this._expRateType);
+    return LevelCalculator.calc(this._state.level + 1, this._expRateType);
   }
 
   gainExp(exp: number): GainExpResult {
