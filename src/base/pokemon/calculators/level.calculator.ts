@@ -1,6 +1,6 @@
-import { ExpRateType } from "./pokemon.type";
+import { ExpRateType } from "../pokemon.type";
 
-export class NextLevelCalculator {
+export class LevelCalculator {
   static calc(level: number, expRateType: ExpRateType) {
     if (expRateType === ExpRateType.Slow) {
       return this.calcSlow(level);

@@ -1,9 +1,5 @@
-import {
-  LAST_POKEMON_NUMBER,
-  PokemonData,
-  TOTAL_POKEMON_NUMBER,
-} from "../../../data/pokemon.data";
-import { NextLevelCalculator } from "./next-level-calculator.util";
+import { PokemonData } from "../../../data/pokemon.data";
+import { LevelCalculator, StatCalculator } from "./calculators";
 
 import {
   PokemonType,
@@ -12,7 +8,6 @@ import {
   PokemonStatModifiers,
   PokemonState,
   PokemonBaseData,
-  Stats,
   EvolutionCondition,
   EvolutionConditionLevel,
   GainExpResult,
@@ -204,32 +199,48 @@ export class Pokemon {
   }
 
   get hp() {
-    return (
-      Math.floor(
-        (((this.baseHp + this._statModifiers.iv.hp) * 2 +
-          Math.floor(Math.sqrt(this._statModifiers.ev.hp) / 4)) *
-          this._state.level) /
-          100,
-      ) +
-      this._state.level +
-      10
+    return StatCalculator.calculateHp(
+      this._baseStats.hp,
+      this.statModifiers.iv.hp,
+      this.statModifiers.ev.hp,
+      this.level,
     );
   }
 
   get attack() {
-    return this.calculateStat(Stats.Attack);
+    return StatCalculator.calculateStat(
+      this._baseStats.attack,
+      this.statModifiers.iv.attack,
+      this.statModifiers.ev.attack,
+      this.level,
+    );
   }
 
   get def() {
-    return this.calculateStat(Stats.Attack);
+    return StatCalculator.calculateStat(
+      this._baseStats.def,
+      this.statModifiers.iv.def,
+      this.statModifiers.ev.def,
+      this.level,
+    );
   }
 
   get special() {
-    return this.calculateStat(Stats.Special);
+    return StatCalculator.calculateStat(
+      this._baseStats.special,
+      this.statModifiers.iv.special,
+      this.statModifiers.ev.special,
+      this.level,
+    );
   }
 
   get speed() {
-    return this.calculateStat(Stats.Speed);
+    return StatCalculator.calculateStat(
+      this._baseStats.speed,
+      this.statModifiers.iv.speed,
+      this.statModifiers.ev.speed,
+      this.level,
+    );
   }
 
   get state(): PokemonState {
@@ -238,17 +249,6 @@ export class Pokemon {
 
   get statModifiers(): PokemonStatModifiers {
     return this._statModifiers;
-  }
-
-  calculateStat(stat: Stats) {
-    return (
-      Math.floor(
-        (((this._baseStats[stat] + this._statModifiers.iv[stat]) * 2 +
-          Math.floor(Math.sqrt(this._statModifiers.ev[stat]) / 4)) *
-          this._state.level) /
-          100,
-      ) + 5
-    );
   }
 
   isAlive() {
@@ -260,7 +260,7 @@ export class Pokemon {
   }
 
   getNextLevelExp() {
-    return NextLevelCalculator.calc(this._state.level, this._expRateType);
+    return LevelCalculator.calc(this._state.level, this._expRateType);
   }
 
   gainExp(exp: number): GainExpResult {
