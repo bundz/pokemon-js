@@ -3,7 +3,8 @@
     "target": "es2022",
     "module": "preserve",
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["mocha", "chai"]
   },
   "include": ["src", "data", "index.ts"]
 }

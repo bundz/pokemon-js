@@ -7,13 +7,18 @@
   "scripts": {
     "check": "tsc",
     "start": "npx tsx index",
-    "test": "node ./node_modules/mocha/bin/mocha.js"
+    "test": "mocha --require tsx ./**/*.test.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^26.1.2",
+    "chai": "^6.2.2",
     "mocha": "^10.3.0",
+    "ts-mocha": "^11.1.0",
+    "tsx": "^4.23.11",
     "typescript": "^7.0.2"
   }
 }

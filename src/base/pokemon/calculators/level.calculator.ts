@@ -2,6 +2,10 @@ import { ExpRateType } from "../pokemon.type";
 
 export class LevelCalculator {
   static calc(level: number, expRateType: ExpRateType) {
+    if (level === 1) {
+      return 0;
+    }
+
     if (expRateType === ExpRateType.Slow) {
       return this.calcSlow(level);
     }
@@ -22,12 +26,15 @@ export class LevelCalculator {
   }
 
   static calcSlow(level: number) {
-    return (Math.pow(level, 3) * 5) / 4;
+    return Math.floor((Math.pow(level, 3) * 5) / 4);
   }
 
   static calcMediumSlow(level: number) {
-    return (
-      (Math.pow(level, 3) * 6) / 5 - 15 * Math.pow(level, 2) + level * 100 - 140
+    return Math.floor(
+      (Math.pow(level, 3) * 6) / 5 -
+        15 * Math.pow(level, 2) +
+        level * 100 -
+        140,
     );
   }
 
@@ -36,6 +43,6 @@ export class LevelCalculator {
   }
 
   static calcFast(level: number) {
-    return (Math.pow(level, 3) * 4) / 5;
+    return Math.floor((Math.pow(level, 3) * 4) / 5);
   }
 }
