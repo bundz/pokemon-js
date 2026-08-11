@@ -255,7 +255,7 @@ export class Pokemon {
     return this.currentHp > 0;
   }
 
-  get isDefeated() {
+  get isFainted() {
     return !this.isAlive;
   }
 
@@ -268,7 +268,6 @@ export class Pokemon {
     if (this._state.level === 100) {
       return result;
     }
-
     this._state.exp = this._state.exp + exp;
 
     if (this._state.exp >= this.getNextLevelExp()) {

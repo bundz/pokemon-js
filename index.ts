@@ -10,4 +10,4 @@ for (let i = 1; i <= 100; i++) {
   result.push({ level: i, slow, medium_slow, medium_fast, fast });
 }
 
-console.log(JSON.stringify(result));
+console.log(result[81]);
