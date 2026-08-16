@@ -13,7 +13,7 @@ export class PCBox {
     }
 
     if (slots.length !== 20) {
-      throw new Error("PCBox length needs to be equal 12");
+      throw new Error("PCBox length needs to be equal 20");
     }
 
     this._name = pcBox.name;
@@ -23,6 +23,14 @@ export class PCBox {
   addToSlot(index: number, pokemon: Pokemon) {
     if (index > 19) {
       throw new Error("Slot out of range");
+    }
+
+    if (index < 0) {
+      throw new Error("Slot out of range");
+    }
+
+    if (!Number.isInteger(index)) {
+      throw new Error("Index must be an integer");
     }
 
     const slot = this._slots[index];
@@ -37,6 +45,14 @@ export class PCBox {
   withdrawalFromSlot(index: number) {
     if (index > 19) {
       throw new Error("Slot out of range");
+    }
+
+    if (index < 0) {
+      throw new Error("Slot out of range");
+    }
+
+    if (!Number.isInteger(index)) {
+      throw new Error("Index must be an integer");
     }
 
     const slot = this._slots[index];

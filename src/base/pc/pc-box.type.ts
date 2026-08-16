@@ -3,6 +3,6 @@ import { Pokemon } from "../pokemon";
 export type PCBoxSlot = Pokemon | null;
 
 export interface IPCBox {
-  slots: PCBoxSlot[];
+  slots?: PCBoxSlot[];
   name: string;
 }
