@@ -6,8 +6,8 @@ export class PC {
   private _boxes: PCBox[] = [];
 
   constructor(pcBoxes?: IPCBox[]) {
-    if (pcBoxes && pcBoxes.length > 12) {
-      throw new Error("Number of boxes exceeded");
+    if (pcBoxes && pcBoxes.length !== 12) {
+      throw new Error("Number of boxes must be 12");
     }
 
     this.fillBoxes(pcBoxes);
@@ -25,7 +25,7 @@ export class PC {
     }
 
     for (let i = 0; i < 12; i++) {
-      this._boxes[i] = new PCBox({ name: `BOX ${i + 1}`, slots: [] });
+      this._boxes[i] = new PCBox({ name: `BOX ${i + 1}` });
     }
   }
 
@@ -34,7 +34,7 @@ export class PC {
       const result = box.addToFreeSlot(pokemon);
 
       if (result) {
-        return;
+        return result;
       }
     }
 
